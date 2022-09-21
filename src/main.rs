@@ -9,8 +9,6 @@ struct RawLockTest {
     data: usize,
 }
 
-impl RawLockTest {}
-
 lazy_static! {
     static ref SINGLETON: Arc<RwLock<RawLockTest>> = Arc::new(RwLock::new(RawLockTest { data: 0 }));
 }
